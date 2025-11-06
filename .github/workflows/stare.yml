@@ -1,0 +1,12 @@
+name: stare repo
+
+on: 
+  watch:
+    types: [started]
+
+jobs:
+  log-someone-stare:
+    runs-on:  ubuntu-latest
+    steps:
+      - name: Log user
+        run: echo "User ${{ github.actor }} just starred your repository!"
