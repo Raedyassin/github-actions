@@ -1,0 +1,19 @@
+name: push-new-branch
+
+on:
+  push:
+    branches:
+      - main
+      - "feature/**"
+    paths:
+      - "src/**"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the repository
+        uses: actions/checkout@v6-beta
+      
+      - name: Run Test Script
+        run: bash  src/test_shell.sh
