@@ -16,4 +16,6 @@ jobs:
         uses: actions/checkout@v6-beta
       
       - name: Run Test Script
-        run: bash  src/test_shell.sh
+        run: |
+          cd src
+          bash test_shell.sh
