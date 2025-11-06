@@ -1,11 +1,11 @@
-name: stare repo
+name: star repo
 
 on: 
   watch:
     types: [started]
 
 jobs:
-  log-someone-stare:
+  log-someone-star:
     runs-on:  ubuntu-latest
     steps:
       - name: Log user
