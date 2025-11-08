@@ -2,7 +2,7 @@ name: Manual workflow
 
 on:
   workflow_dispatch:
-    inputes:
+    inputs:
       name:
         description: "Your name"
         required: true
@@ -20,4 +20,4 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Print name
-        run: echo "Hello ${{ github.event.inputs.name }}"
+        run: echo "🎉🎉 Hello ${{ github.event.inputs.name }}"
