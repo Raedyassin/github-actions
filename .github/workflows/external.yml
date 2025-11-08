@@ -1,0 +1,12 @@
+name: External API Triggered Workflow
+
+on:
+  repository_dispatch:
+    types: [print-payload]
+
+jobs:
+  print-payload:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Print Payload
+        run: echo "✅🎉 ${{ github.event.client_payload }}"
