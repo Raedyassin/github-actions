@@ -1,12 +1,12 @@
-name: Hourly check Schedule
+name: 10 Minutes check Schedule
 
 on:
   schedule:
-    - cron: '13 * * * *'
+    - cron: '*/10 * * * *'
 
 jobs:
   hourly-check:
     runs-on: ubuntu-latest
     steps:
-      - name: 1 Hourly check
-        run: echo "✅ 1 Hourly cicle for check"
+      - name: 10 Minutes check
+        run: echo "✅ 10 Minutes check"
