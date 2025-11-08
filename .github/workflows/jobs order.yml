@@ -1,0 +1,27 @@
+# jobs are run in parallel
+name: Jobs order
+
+on:
+  workflow_dispatch:
+
+jobs:
+  job1:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: echo "${{ github.workflow}} => ${{ github.job }} is running by ${{ github.actor }}"
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: echo "${{ github.workflow}} => ${{ github.job }} is running by ${{ github.actor }}"
+  job3:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: echo "${{ github.workflow}} => ${{ github.job }} is running by ${{ github.actor }}"
+  job4:
+    runs-on: ubuntu-latest
+    steps:
+      - name: print
+        run: echo "${{ github.workflow}} => ${{ github.job }} is running by ${{ github.actor }}"
