@@ -1,0 +1,12 @@
+name: Hourly check Schedule
+
+on:
+  schedule:
+    - cron: '13 * * * *'
+
+jobs:
+  hourly-check:
+    runs-on: ubuntu-latest
+    steps:
+      - name: 1 Hourly check
+        run: echo "✅ 1 Hourly cicle for check"
