@@ -1,4 +1,4 @@
-name: push-new-branch
+name: Push
 
 on:
   push:
