@@ -7,11 +7,13 @@ on:
 jobs:
   job1:
     runs-on: ubuntu-latest
+    needs: [job2]
     steps:
       - name: print
         run: echo "${{ github.workflow}} => ${{ github.job }} is running by ${{ github.actor }}"
   job2:
     runs-on: ubuntu-latest
+    needs: [job3]
     steps:
       - name: print
         run: echo "${{ github.workflow}} => ${{ github.job }} is running by ${{ github.actor }}"
@@ -22,6 +24,7 @@ jobs:
         run: echo "${{ github.workflow}} => ${{ github.job }} is running by ${{ github.actor }}"
   job4:
     runs-on: ubuntu-latest
+    needs: [job3]
     steps:
       - name: print
         run: echo "${{ github.workflow}} => ${{ github.job }} is running by ${{ github.actor }}"
