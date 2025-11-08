@@ -1,0 +1,12 @@
+name: Run after Push workflow
+on:
+  workflow_run:
+    workflows: ["Push"]
+    types:
+      - completed
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Say Push Workflow Completed
+        run: echo "✅ The Push workflow has been completed! 🎉🎉"
