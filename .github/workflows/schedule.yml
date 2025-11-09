@@ -1,8 +1,9 @@
 name: 10 Minutes check Schedule
 
 on:
-  schedule:
-    - cron: '*/10 * * * *'
+  workflow_dispatch:
+  # schedule:
+  #   - cron: '*/10 * * * *'
 
 jobs:
   hourly-check:
